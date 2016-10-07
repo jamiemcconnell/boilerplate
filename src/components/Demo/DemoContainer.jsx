@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { browserHistory } from 'react-router';
+import ComponentOne from './ComponentOne';
+import ComponentTwo from './ComponentTwo';
 
-export class DemoContainer extends Component {
+export default class DemoContainer extends Component {
   render() {
     return (
       <div>
         <h1>DemoContainer</h1>
+
+        <div className="list list--left">
+          <ComponentOne/>
+        </div>
+
+        <div className="list list--right">
+          <ComponentTwo/>
+        </div>
+
       </div>
     );
   };
 };
-
-export const mapStateToProps = (state) => ({
-
-});
-
-export const mapDispatchToProps = (dispatch) => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(DemoContainer);

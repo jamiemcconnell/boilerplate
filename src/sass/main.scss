@@ -16,3 +16,14 @@ h2 { font-size: 3rem; @include text-header; }
 h3 { font-size: 2.5rem; @include text-header; }
 h4 { font-size: 2rem; @include text-header; }
 h5 { font-size: 1.5rem; @include text-header; }
+
+.list {
+  border: 1px solid #000;
+  width: 400px;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+
+.list--left { margin-right: 10px; }
+.list--right { margin-left: 10px; }
