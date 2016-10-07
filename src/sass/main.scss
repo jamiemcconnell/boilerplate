@@ -1,0 +1,18 @@
+@import "~meyer-reset-sass/reset";
+
+@mixin text-header {
+  font-weight: bold;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  font-size: 14px;
+}
+
+h1 { font-size: 4rem; @include text-header; }
+h2 { font-size: 3rem; @include text-header; }
+h3 { font-size: 2.5rem; @include text-header; }
+h4 { font-size: 2rem; @include text-header; }
+h5 { font-size: 1.5rem; @include text-header; }

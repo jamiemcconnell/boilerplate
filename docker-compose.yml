@@ -1,0 +1,6 @@
+www:
+  build: .
+  volumes:
+    - "./dist/:/ui"
+  ports:
+    - "80:80"
