@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/2big2send/ui.git"
+    "url": "git+ssh://git@github.com:jamiemcconnell/boilerplate.git"
   },
   "author": "Jamie McConnell <jamie_mcconnell@icloud.com>",
   "license": "MIT",
