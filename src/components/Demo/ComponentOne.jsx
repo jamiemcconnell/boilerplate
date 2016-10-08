@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { browserHistory } from 'react-router';
+
+import Loading from '../../components/Loading/Loading';
 
 export class ComponentOne extends Component {
   render() {
     return (
       <div>
         ComponentOne
+
+        <Loading/>
       </div>
     );
   };
