@@ -5,6 +5,11 @@ const webpack = require('webpack'),
 
 const cdnUrl = '';
 
+if(typeof process.env.NODE_ENV === 'undefined') {
+  process.env.NODE_ENV = 'development';
+  console.log('NODE_ENV environment variable not set - using `development`');
+}
+
 const config = {
   context: __dirname + '/src',
   entry: {
