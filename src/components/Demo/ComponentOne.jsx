@@ -8,8 +8,7 @@ export class ComponentOne extends Component {
   render() {
     return (
       <div>
-        ComponentOne
-
+        ToDo List
         <Loading/>
       </div>
     );

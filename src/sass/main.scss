@@ -27,3 +27,6 @@ h5 { font-size: 1.5rem; @include text-header; }
 
 .list--left { margin-right: 10px; }
 .list--right { margin-left: 10px; }
+
+.loading {}
+.loading--hidden { display: none; }

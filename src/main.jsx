@@ -4,6 +4,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
+import thunk from 'redux-thunk';
 
 // Import the top level SCSS file - it is compiled and removed from the JS code
 // by webpack.
@@ -20,7 +21,7 @@ import reducers from './reducers/index';
 
 // Redux middleware.
 //
-const middleware = [];
+const middleware = [thunk];
 
 // Add logging if we're not in production.
 //
