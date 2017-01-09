@@ -1,7 +1,13 @@
 
+default:
+	echo " build "
+
 build:
 	webpack
 
-make serve-local:
+serve-local:
 	docker-compose up -d
+	webpack --watch
+
+watch:
 	webpack --watch

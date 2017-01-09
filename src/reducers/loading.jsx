@@ -1,4 +1,4 @@
-import { ActionTypes } from './LoadingActions';
+import { ActionTypes } from 'actions/LoadingActions';
 
 export const setLoading = (state, action) => {
   return Object.assign({}, state, {

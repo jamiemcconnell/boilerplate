@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loading } from './LoadingActions';
+import { loading } from 'actions/LoadingActions';
 
 export class Loading extends Component {
   render() {

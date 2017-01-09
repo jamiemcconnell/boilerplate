@@ -22,8 +22,7 @@ const config = {
   },
   resolve: {
     extensions: ['', '.jsx', '.js'],
-    root: path.resolve(__dirname),
-    module_directories: ['node_modules']
+    root: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')]
   },
   target: 'web',
   devtool: (process.env.NODE_ENV === 'production' ? 'source-map' : ''),
