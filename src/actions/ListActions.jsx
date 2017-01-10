@@ -8,7 +8,7 @@ export const ActionTypes = {
 
 export const add = (item) => ({
   type: ActionTypes.Add,
-  item
+  item: item.text
 });
 
 export const fetch = () => {

@@ -57,7 +57,10 @@ const config = {
       template: 'index.hbs'
     }),
     new webpack.BannerPlugin('/** Generated ' + new Date() + ' **/', { raw: true })
-  ]
+  ],
+  watchOptions: {
+    ignored: "node_modules/**/*.*"
+  }
 };
 
 if(process.env.NODE_ENV === 'production') {
