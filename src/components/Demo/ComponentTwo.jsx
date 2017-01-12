@@ -9,20 +9,16 @@ import { loading } from 'actions/LoadingActions';
 import { add } from 'actions/ListActions';
 
 export class ComponentTwo extends Component {
-  doSubmit(data) {
-    console.log('doSubmit');
-    console.log(data);
-    this.props.add(data);
-  }
-
   render() {
-    const {handleSubmit, add} = this.props;
+    const {handleSubmit, reset, add} = this.props;
+    const doAdd = (data) => {
+      add(data);
+      reset();
+    };
 
     return (
-      <div>
-        New Item
-        <form name="newToDo" onSubmit={ handleSubmit(add) }>
-          <label htmlFor="name">Text</label>
+      <div className="list-newItem">
+        <form name="newToDo" onSubmit={ handleSubmit(doAdd) }>
           <Field name="text" component="input" type="text" />
           <button type="submit">Add</button>
         </form>

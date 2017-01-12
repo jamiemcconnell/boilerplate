@@ -7,8 +7,6 @@ export class Loading extends Component {
   render() {
     let loadingStyle = 'loading';
 
-    console.log(this.props);
-
     if(!this.props.loading) {
       loadingStyle += ' loading--hidden';
     }
@@ -20,8 +18,7 @@ export class Loading extends Component {
 };
 
 export const mapStateToProps = (state) => {
-  console.log('state: ' + JSON.stringify(state));
-  return { loading: state.loading.loading };
+  return { loading: state.loading.toObject().isLoading };
 };
 
 export const mapDispatchToProps = (dispatch) => ({

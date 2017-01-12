@@ -4,12 +4,13 @@ import { bindActionCreators } from 'redux';
 
 import Loading from 'components/Loading/Loading';
 
-import ListActions from 'actions/ListActions';
+import { fetch, ListActions } from 'actions/ListActions';
 
 export class ComponentOne extends Component {
   componentWillMount() {
     // Get items.
     //
+    this.props.fetch();
   }
 
   render() {
@@ -18,8 +19,9 @@ export class ComponentOne extends Component {
         ToDo List
         <Loading/>
         <ul>
-          { this.props.list.map((item, i) => {
-              return <li key={i}>{ item }</li>
+          {
+            this.props.list.toArray().map((item, index) => {
+              return (<li key={index}>{item}</li>)
             })
           }
         </ul>
@@ -29,11 +31,11 @@ export class ComponentOne extends Component {
 };
 
 export const mapStateToProps = (state) => {
-  return { list: state.list.items };
+  return { list: state.list };
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-
+  fetch: bindActionCreators(fetch, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ComponentOne);

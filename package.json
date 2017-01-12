@@ -33,16 +33,18 @@
     "webpack": "^1.13.3"
   },
   "dependencies": {
-    "meyer-reset-sass": "^1.0.1",
-    "node-sass": "^3.13.0",
-    "react": "^15.3.2",
-    "react-dom": "^15.4.0",
-    "react-redux": "^4.4.6",
-    "react-router": "^3.0.0",
-    "react-router-redux": "^4.0.7",
-    "redux-form": "^6.4.3",
-    "redux-logger": "^2.7.4",
-    "redux-thunk": "^2.1.0",
-    "superagent": "^3.1.0"
+    "hapi": "^16.1.0",
+    "immutable": "^3.8.1",
+    "meyer-reset-sass": "1.0.1",
+    "node-sass": "4.2.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-redux": "5.0.1",
+    "react-router": "3.0.0",
+    "react-router-redux": "4.0.7",
+    "redux-form": "6.4.3",
+    "redux-logger": "2.7.4",
+    "redux-thunk": "2.1.0",
+    "superagent": "3.3.1"
   }
 }

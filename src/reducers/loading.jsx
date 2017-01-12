@@ -1,16 +1,15 @@
+import { Map } from 'immutable';
 import { ActionTypes } from 'actions/LoadingActions';
+import { ActionTypes as ListActionTypes } from 'actions/ListActions';
 
-export const setLoading = (state, action) => {
-  return Object.assign({}, state, {
-    loading: action.loading
-  });
-};
-
-export const loading = (state = { loading: false }, action) => {
+export const loading = (state = Map().set('isLoading', false), action) => {
   switch(action.type) {
-    case ActionTypes.Loading:
-      return setLoading(state, action);
-      break;
+    case ListActionTypes.Fetching:
+      return state.set('isLoading', true);
+
+    case ListActionTypes.FetchingComplete:
+      return state.set('isLoading', false);
+
     default:
       return state;
   }

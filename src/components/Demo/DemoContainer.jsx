@@ -10,12 +10,8 @@ export default class DemoContainer extends Component {
 
         <div className="list list--left">
           <ComponentOne/>
-        </div>
-
-        <div className="list list--right">
           <ComponentTwo/>
         </div>
-
       </div>
     );
   };
